@@ -1,6 +1,7 @@
 // . java 常用的转义字符
 
-
+// 编码：javac -encoding UTF-8 ChangeChar.java
+// 运行：java ChangeChar
 
 public class ChangeChar {
   public static void main(String[] args) {
@@ -11,7 +12,7 @@ public class ChangeChar {
     System.out.println("jack\nsmith\nmary");
     /*
     jack
-    smith
+    smith 
     mary
     */ 
 

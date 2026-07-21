@@ -18,6 +18,6 @@
 // 对修改后的Hello.java源文件需要重新编译，生成新的class文件后，再执行才能生效
 public class Hello {
     public static void main(String[] args) {
-        System.out.println("Hello, world!");
+        System.out.println("Hello, world2!");
     }
 }
