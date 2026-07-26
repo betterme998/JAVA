@@ -29,3 +29,5 @@ public class Comment01 {
     System.out.println("结果=" + sum);
   }
 }
+
+// 文档注释:注释内容可以被JDK提供的工具iavadoc所解析，生成一套以网页文件形式体现的该程序的说明文档,一般写在类
