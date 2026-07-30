@@ -111,5 +111,16 @@ public class VarDetail {
     System.out.println(Math.abs(num11 - num12));
 
     // /细节:如果是直接查询得的的小数或者直接赋值，是可以判断相等
+    // -----------------------------------------------------------
+
+    char c1 = 'a';
+    char c2 = '\t';
+    char c3 = '将';
+    char c4 = 97; //说明：字符类型可以直接存放一个数字
+    System.out.println(c1);//a
+    System.out.println(c2);// 
+    System.out.println(c3);//将
+    System.out.println(c4);//a 当输出c4时候，会输出97表示的字符 => 编码的概念
+
   }  
 }
