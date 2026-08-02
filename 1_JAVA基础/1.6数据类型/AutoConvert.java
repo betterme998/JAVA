@@ -45,7 +45,28 @@ public class AutoConvert {
 
     // char c1 = b3; 错误 原因 byte 不能自动转成 char
 
-    // 细节4.
+    // 细节4. byte，short，char 他们三者可以计算，在计算时首先转换为int类型。
+
+    byte b5 = 1;
+    byte b6 = 2;
+    short s1 = 1;
+    // short s2 = b5 + s1; 错误 int
+    int s2 = b5 + s1; //b5 + s1 => int
+
+
+    // byte b7 = b5 + b6; //错 int
+    int b7 = b5 + b6; //对
+
+    //自动提升原则: 表达式结果的类型自动提升为 操作数中最大的类型
+
+    byte b8 = 1;
+    short s3 = 100;
+    int num200 = 1;
+    double num300 = 1.1;
+
+    double num500 = b8 + s3 + num200 + num300; //最大类型double
+
+    
 
   }
 }

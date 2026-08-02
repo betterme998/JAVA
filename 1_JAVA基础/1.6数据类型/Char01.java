@@ -35,7 +35,7 @@ public class Char01 {
     // //在java中，char的本质是一个整数，在输出时，是unicode码对应的字符
     //要输出对应的数字，可以(int)字符
     char c5 = 97;
-    System.out.println(c5); // a
+    System.out.println((int)c5); // a
 
     char c6 = 'a'; //输出'a' 对应的数字
     System.out.println((int)c6);//97
