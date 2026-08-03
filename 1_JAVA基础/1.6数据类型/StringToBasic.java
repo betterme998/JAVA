@@ -8,6 +8,12 @@
 
 .基本类型转String类型语法: 将基本类型的值+""即可  
 .String类型转基本数据类型语法:通过基本类型的包装类调用parsexX方法即可
+
+1.在将String 类型转成 基本数据类型时，要确保String类型能够转成有效的数据，比
+如 我们可以把"123",转成一个整数，但是不能把"hello" 转成一个整数
+
+2.如果格式不正确，就会抛出异常，程序就会终止，这个问题在异常处理章节中，会
+处理
 */ 
 public class StringToBasic {
   // 编写一个main方法
@@ -48,6 +54,11 @@ public class StringToBasic {
     // /怎么把字符串转成字符char -> 是指 把字符串的第一个字符得到
     // //解读 s5.charAt(0)得到 s5字符串的第一个字符 1
     System.out.println(s5.charAt(1)); //1
+
+    // 演示字符串转基本数据类型的细节
+    String str = "hello";
+    // 转成int类型
+    // int n1 = Integer.parseInt(str);报错
 
   }
 }
