@@ -58,5 +58,32 @@ public class LogiclOperator {
     //&的判断导致后面的++b执行了，所以b=10，a=4
     System.out.println("a=" + a + "b=" + b);
 
+    // --------------------------------
+    // 短路或 || 和 逻辑或 |
+    // 短路或 ||而言 如果第一个条件为true，结果为true，后面的条件不再判断
+    // 逻辑或 |而言 如果第一个条件为true，结果为true，后面的条件依然判断
+
+     if (a < 11 || ++b < 50) {
+      System.out.println("ok3");
+     }
+    System.out.println("a=" + a + "b=" + b);//a=4,b=10
+
+     if (a < 11 & ++b < 50) {
+      System.out.println("ok3");
+     }
+     //|的判断导致后面的++b执行了，所以b=10，a=4
+    System.out.println("a=" + a + "b=" + b);//a=4,b=9
+
+    // __________________________________________
+    // !取反 基本规则
+    //  如果条件本身成立，结果为false，否则为true
+    System.out.println(60 > 20);//true
+    System.out.println(!(60 > 20));//false
+
+    //a^b:叫逻辑异或，当a和b不同时，则结果为true，否则为false
+    boolean b2 = (10 > 1) ^ (3 < 5); 
+    System.out.println("b="+b2);//false
+
+
   }
 }
