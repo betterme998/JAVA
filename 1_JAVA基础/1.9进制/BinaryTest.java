@@ -79,6 +79,12 @@ ob11010101 = 1101(A) 0101(5) = oxD5
 案例:请将 0237 转成二进制
 0237 = xb10011111
 
+十六进制转换成二进制  
+规则:将十六进制数每1位，转成对应的一个4位的二进制数即可。  
+案例:请将 0x23B 转成二进制
+0x23B = xb0010 0011 1011
+
+
 */ 
 public class BinaryTest {
   public static void main(String[] args) {
