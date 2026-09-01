@@ -75,5 +75,10 @@ public class Bitperator {
     System.out.println(1 << 2);// 4
     System.out.println(4 << 3);// 32
 
+    // 推导
+    // 公式 a%b 当a是小数时，公式 = a - (int)a/b*b 
+    // -10.5 - (-10)/3*3 = -10.5 + 9 = -1.5
+    System.out.println(-10.5%3);//1.5
+
   }
 }
