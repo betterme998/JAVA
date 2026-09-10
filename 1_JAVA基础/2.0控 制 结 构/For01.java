@@ -24,9 +24,21 @@ public class For01 {
     for( ; i <= 10 ;) {
       System.out.println("hello world");
       // 为什么写到这里，而不是for循环里面？
-      //假设在
+      //因为写for循环里只能在for循环里面使用i，不能在for循环外面使用i，所以i要写到这里，而不是for循环里面。
       i++; //循环变量迭代
+    }
+    System.out.println("i=" + i);//11
 
+    // 补充·
+    // for(;;) {//表示一个无限循环，死循环
+    //   System.out.println("hello world");
+    // }
+
+    // 3.环初始值可以有多条初始化语句，但要求类型一样，并且中间用逗号隔开
+    // 循环变量迭代也可以有多条变量迭代语句，中间用逗号隔开。
+    int count = 3;
+    for(int a = 0,j = 0; a < count; a++ ,j += 2) {
+      System.out.println("a=" + a + ",j=" + j);
     }
   }
 }
