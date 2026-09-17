@@ -7,6 +7,7 @@
 2.先执行，再判断，也就是说，一定会执行一次  
 3.最后有一个分号;  
 */ 
+import java.util.Scanner;
 public class DoWhile01 {
   public static  void  main(String[] args) {
     // 输出10句，你好
@@ -31,8 +32,21 @@ public class DoWhile01 {
     // 3)统计1--200之间能被5整除但不能被3整除的个数
     int count = 0;
     int k = 1;
+    do {
+      if(k % 5 == 0 && k % 3 != 0) {
+        count++;
+      }
+      k++;
+    }while (k <= 200);
+    System.out.println("能被5整除但不能被3整除的个数为:" + count);
     
 
     // 如果李三不还钱，则老韩将一直使出五连鞭，直到李三说还钱为止[System.out.println("老韩问:还钱吗? y/n")] do...while
+    Scanner scanner = new Scanner(System.in);
+    String line = "";
+    do {
+      System.out.println("老韩问:还钱吗? y/n");
+      line = scanner.next();
+    }while(!line.equalsIgnoreCase("y"));
   }
 }
