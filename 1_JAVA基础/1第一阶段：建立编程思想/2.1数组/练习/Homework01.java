@@ -41,6 +41,7 @@ public class Homework01 {
    boolean condition = true;
    boolean flag = false;
    while (condition) {
+    flag = false;
     System.out.println("请输入要插入的数字：");
     int num = sc.nextInt();
     sc.nextLine(); // 消耗换行符
@@ -49,14 +50,17 @@ public class Homework01 {
       if (i < arr.length && num < arr[i]) {
         newArr[i] = flag ? arr[i-1] : num;
         flag = true;
-        // continue;
+        continue;
       }
-      // newArr[i] = arr[i];
+      if(i == newArr.length-1) flag = true;
+      
+      newArr[i] = flag ? (i == newArr.length-1 && num > arr[i-1] ? num : arr[i-1]) : arr[i];
+      // newArr[i] =  arr[i];
     }
     arr = newArr;
     System.out.println("插入后的数组为：");
     for(int i = 0; i < arr.length; i++) {
-      System.out.println(arr[i] + " ");
+      System.out.print(arr[i] + " ");
     }
     System.out.println();
    }
