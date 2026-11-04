@@ -1,0 +1,56 @@
+
+public class RecursionExercise01 {
+  // 请使用递归的方式求出斐波那契数1,1,2,3,5,8,13...给你一个整数n，求出它的值是多
+  public static void main(String[] args) {
+    T t = new T();
+    System.out.println("第9个斐波那契数是：" + t.fibonacci(9));
+
+    System.out.println("第1天时，最初共" + t.monkeyEating(1) + "个桃子。");
+
+  }
+}
+
+class T {
+  public int fibonacci(int n) {
+  // 请使用递归的方式求出斐波那契数1,1,2,3,5,8,13...给你一个整数n，求出它的值是多
+  /*
+  思路分析
+  1.当n=1斐波那契数 是1
+  2.当n=2斐波那契数 是1
+  3.当n>=3斐波那契数 是前两个数的和
+  */ 
+
+    if (n >= 1) {
+      if (n == 1 || n == 2) {
+        return 1;
+      }else {
+        return fibonacci(n-1) + fibonacci(n-2);
+      }
+    }else {
+      System.out.println("n必须大于等于1");
+      return -1;
+    }
+  }
+
+  /*
+  猴子吃桃子问题:有一堆桃子，猴子第一天吃了其中的一半，并再多吃了一个!以后每天猴子都吃其中的一半，然后再多吃一个。
+  当到第10天时，想再吃时(即还没吃)发现只有1个桃子了。问题:最初共多少个桃子?
+
+  思路分析[逆推]:
+  1. day=10时 有1桃子
+  2. day=9时 有(day10 + 1) * 2 = 4
+  3. day=9时 有(day9 + 1) * 2 = 10
+  4.规律就是 前一天的桃子=(后一天的桃子+1)*2
+  */ 
+
+  public int monkeyEating(int n) {
+    if(n == 10) {
+      return 1;
+    } else if (n >= 1 && n <=9) {
+      return (monkeyEating(n + 1) + 1) * 2;
+    }else {
+      System.out.println("n必须大于等于1且小于等于10");
+      return -1;
+    }
+  } 
+}
