@@ -7,6 +7,12 @@ public class MiGong {
     int[][] map = new int[8][7];
     map = DrawMap.drawMap(map);  
     showMap(map);
+
+    T t1 = new T();
+    t1.findWay(map, 1, 1);
+    System.out.println("===============");
+    showMap(map);
+    
   }
 
   public static void showMap(int[][] map) {
@@ -65,7 +71,13 @@ class T {
           return true;
         } else if(findWay(map, i, j + 1)) {//右
           return true;
-
+        } else if(findWay(map, i - 1, j)) {//上
+          return true;
+        } else if(findWay(map, i, j - 1)) {//左
+          return true;
+        } else { //表示该位置，没有路了
+          map[i][j] = 3;
+          return false;
         }
       } else { //map[i][j] = 1,2,3 .0 表示可以走,1 表示障碍物,2 表示可以走 ,3表示走过但是走不通是死路
         return false;
